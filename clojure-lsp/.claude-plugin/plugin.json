@@ -1,0 +1,8 @@
+{
+  "name": "clojure-lsp",
+  "description": "Clojure LSP server for code intelligence (go-to-definition, find references, hover docs)",
+  "homepage": "https://clojure-lsp.io/",
+  "repository": "https://github.com/jordan-yee/claude-plugins/tree/master/clojure-lsp",
+  "keywords": ["clojure", "clojurescript", "lsp", "code-intelligence", "language-server"],
+  "lspServers": "./.lsp.json"
+}

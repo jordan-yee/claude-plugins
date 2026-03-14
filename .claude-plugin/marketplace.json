@@ -1,0 +1,16 @@
+{
+  "name": "jordan-yee-claude-plugins",
+  "description": "Jordan Yee's custom Claude Code plugins",
+  "owner": {
+    "name": "Jordan Yee"
+  },
+  "plugins": [
+    {
+      "name": "clojure-lsp",
+      "description": "Clojure LSP server for code intelligence (go-to-definition, find references, hover docs)",
+      "version": "1.0.0",
+      "source": "./clojure-lsp",
+      "category": "development"
+    }
+  ]
+}
