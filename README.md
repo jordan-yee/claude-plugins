@@ -58,9 +58,12 @@ Unlike other plugin changes, LSP configuration takes effect only after a full re
 
 In a Clojure project, ask Claude:
 
-> Find all references to `[a function name]` in this project.
+> Use clojure-lsp to list all symbols in the `[a.namespace.in.your.project]` namespace.
 
-This is an LSP-specific operation Claude cannot perform from training data alone — a successful response confirms the language server is connected.
+You should see Claude Code use the LSP server with a message like:
+```
+● LSP(operation: "documentSymbol", file: "[filepath/to/namespace]")
+```
 
 ## References
 
