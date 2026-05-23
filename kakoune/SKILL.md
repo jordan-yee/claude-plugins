@@ -1,16 +1,19 @@
 ---
 name: kakoune
 description: >-
-  Author and debug Kakoune editor configuration and plugins written in kakscript
-  — .kak files, kakrc, filetype/highlighter/indentation definitions, hooks,
-  options, faces, key mappings, user modes, and shell-integration commands. Use
-  this whenever editing a .kak file or kakrc, writing or modifying a Kakoune
-  plugin, building a filetype or highlighter or indent-on-newline script,
-  debugging kakscript quoting/expansion/hook problems, or answering "how do I … in
-  Kakoune config". Covers command parsing and %-string quoting, the
-  %val/%opt/%reg/%arg/%sh expansion system, evaluate-commands / execute-keys and
-  draft contexts, the provide-module / require-module plugin pattern, highlighter
-  regions, hook-group cleanup discipline, and POSIX-shell integration.
+  Use this skill for any kakscript task or Kakoune question. Primary: authoring
+  or editing .kak files and kakrc — filetype detection, syntax highlighting,
+  indentation hooks, key mappings, user modes, options, faces, plugin structure,
+  and POSIX shell integration. Also primary: debugging and diagnosing kakscript
+  problems — hooks that don't fire, highlighters that don't match, quoting or
+  expansion errors, hook-cleanup leaks, draft-context surprises, or any
+  "why doesn't this work?" question about kakscript. Secondary: general Kakoune
+  usage questions — built-in commands, normal/insert/prompt mode keybindings,
+  the client–server model, registers, the completion system — even when no
+  scripting is involved. Covers command parsing and %-string quoting, the
+  %val/%opt/%reg/%arg/%sh/%exp expansion system, evaluate-commands / execute-keys
+  and draft contexts, the provide-module / require-module plugin pattern,
+  highlighter regions, hook-group cleanup discipline, and shell integration.
 ---
 
 # Writing Kakoune scripts and plugins
@@ -76,9 +79,13 @@ local  >  window  >  buffer  >  global
    `-group <ft>-…` and tear them down with a `hook -once -always window
    WinSetOption filetype=.* %{ remove-hooks window <ft>-.+ }`. Forgetting this
    leaks behavior across filetypes. See `references/hooks.md`.
-5. **Prefix everything and document it.** Every non-hidden option/command/face is
-   named after its script and carries a `-docstring`. See
-   `references/plugin-structure-and-conventions.md`.
+5. **Prefix every option, command, face, and hook group with the script name.**
+   Kakscript's namespace is entirely global — two scripts defining `enabled` or
+   `format` silently clobber each other. Prefixing (`myplugin_enabled`,
+   `myplugin-format`) is the only collision-avoidance mechanism the language
+   provides, so omitting it is a latent bug, not just a style lapse. Add
+   `-docstring` to everything non-hidden so collisions surface in completion.
+   See `references/plugin-structure-and-conventions.md`.
 
 ## Which reference to open
 
