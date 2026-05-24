@@ -11,6 +11,13 @@
       "version": "1.0.0",
       "source": "./clojure-lsp",
       "category": "development"
+    },
+    {
+      "name": "kakoune",
+      "description": "Author, debug, and answer questions about Kakoune editor configuration and kakscript plugins",
+      "version": "1.0.0",
+      "source": "./kakoune",
+      "category": "development"
     }
   ]
 }

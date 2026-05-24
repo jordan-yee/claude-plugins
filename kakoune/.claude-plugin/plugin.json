@@ -1,0 +1,5 @@
+{
+  "homepage": "https://kakoune.org",
+  "repository": "https://github.com/jordan-yee/claude-plugins/tree/master/kakoune",
+  "keywords": ["kakoune", "kakscript", "kak", "editor", "text-editor"]
+}
