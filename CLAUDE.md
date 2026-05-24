@@ -28,13 +28,11 @@ Each plugin lives in its own top-level directory.
 
 ## Plugin manifest conventions
 
-`marketplace.json` is the single source of truth for `name`, `description`, `version`, and
-`category`. Plugin-level `.claude-plugin/plugin.json` files exist only for fields that have no
-equivalent in the marketplace entry: `homepage`, `repository`, `keywords`, and functional fields
-like `lspServers`. Do not duplicate fields between the two files.
-
-The manifest `name` field is intentionally omitted from `plugin.json` to avoid duplication;
-Claude Code falls back to the directory name.
+`marketplace.json` is the single source of truth for `description`, `version`, and `category`.
+Plugin-level `.claude-plugin/plugin.json` files must include `name` (required by Claude Code even
+when the manifest exists) and may include fields with no marketplace equivalent: `homepage`,
+`repository`, `keywords`, and functional fields like `lspServers`. Do not duplicate `description`,
+`version`, or `category` between the two files.
 
 ## Plugin types
 
