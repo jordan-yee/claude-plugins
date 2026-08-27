@@ -1,0 +1,5 @@
+{
+  "name": "repo-reference",
+  "repository": "https://github.com/jordan-yee/claude-plugins/tree/master/repo-reference",
+  "keywords": ["git", "clone", "docs", "documentation", "reference", "source"]
+}

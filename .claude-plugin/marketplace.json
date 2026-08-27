@@ -16,6 +16,12 @@
       "description": "Author, debug, and answer questions about Kakoune editor configuration and kakscript plugins",
       "source": "./kakoune",
       "category": "development"
+    },
+    {
+      "name": "repo-reference",
+      "description": "Answer questions about libraries, tools, and other dependencies from a local Git clone of its source and docs instead of web pages or memory",
+      "source": "./repo-reference",
+      "category": "development"
     }
   ]
 }

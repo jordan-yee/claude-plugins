@@ -18,6 +18,26 @@ Connects Claude Code to the [clojure-lsp](https://clojure-lsp.io/) language serv
 
 **Prerequisite:** The `clojure-lsp` binary must be installed and available on your `$PATH`. See [clojure-lsp installation](https://clojure-lsp.io/installation/).
 
+### kakoune
+
+A skill for authoring, debugging, and answering questions about [Kakoune](https://kakoune.org) configuration and kakscript plugins.
+
+### repo-reference
+
+A skill that answers questions about a library, tool, or other dependencies by consulting a local Git clone of its source and docs — greppable raw files at the exact version your project uses, instead of web pages or recollection.
+
+**Where clones go** is configured per machine in `config.md` under the plugin's data directory (`~/.claude/plugins/data/repo-reference-jordan-yee-claude-plugins/`). The layout is a base directory holding one directory per host, each holding `<org>/<repo>` — by default the base is your home dir, so GitHub repos land in `~/github/<org>/<repo>` and a Codeberg repo would go to a parallel `~/codeberg/<org>/<repo>`. Three layers resolve a repo, most specific winning:
+
+| Layer      | Config entry                                     | Resolves to                    |
+| :--------- | :----------------------------------------------- | :----------------------------- |
+| Per-repo   | `https://github.com/torvalds/linux: ~/big/linux` | that exact path                |
+| Per-domain | `github.com: ~/github`                           | `~/github/<org>/<repo>`        |
+| Default    | base `~`, naming `short`                         | `~/<host-dir>/<org>/<repo>`    |
+
+On first use the skill looks for directories that already hold clones and follows the convention it finds — including the case where the host directories are nested under a container such as `~/src/github` and `~/src/codeberg`, which it reads as base `~/src`. It proposes what it found and writes `config.md` once you confirm. Edit that file any time to move things around.
+
+Alongside it, `index.md` accumulates short notes on each repo — where its docs live, which directory holds the interesting source. Both files live outside the plugin cache, so they survive plugin updates.
+
 ## Usage
 
 ### 1. Add the marketplace
