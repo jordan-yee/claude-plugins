@@ -1,12 +1,12 @@
 ---
 name: repo-reference
 description: >-
-  Consult a library's docs or source code by cloning its Git repo locally.
-  Use whenever you need accurate details about a library, tool, framework, or
-  application — API usage, configuration, internals, changelogs, version
-  differences — instead of fetching web pages or answering from memory.
-  Applies to anything with a Git repo (GitHub, SourceHut, Codeberg, GitLab,
-  etc.), even if the user doesn't say "clone" or "repo".
+  Answer questions about a library, tool, or any other open source project from
+  a local Git clone of its source and docs. Use whenever accurate detail
+  matters: API usage, configuration, internals, changelogs, differences between
+  versions. Always prefer this over fetching web pages. Use this when answering
+  from memory is uncertain, hard to verify (or verified as incorrect), or
+  accuracy is paramount.
 ---
 
 # Repo Reference
@@ -17,8 +17,7 @@ available at the exact version the project uses.
 ## State lives outside the plugin
 
 This plugin keeps two files in `${CLAUDE_PLUGIN_DATA}` — a per-machine
-directory that survives plugin updates. Never write state into the plugin's
-own directory; it is a cache that gets replaced on every update.
+directory that survives plugin updates.
 
 | File        | Owner | Purpose                                       |
 | :---------- | :---- | :-------------------------------------------- |
