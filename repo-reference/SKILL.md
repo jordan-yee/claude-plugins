@@ -24,8 +24,6 @@ directory that survives plugin updates.
 | `config.md` | User  | Where clones go on this machine               |
 | `index.md`  | You   | Per-repo notes worth reusing (see The index)  |
 
-Keep them separate so rewriting notes can never clobber the user's config.
-
 If `${CLAUDE_PLUGIN_DATA}` reaches you unexpanded (you see the literal `${...}`
 rather than a path), fall back to `~/.claude/plugins/data/repo-reference-*/`,
 creating it if needed, and mention the fallback to the user once.
@@ -164,8 +162,8 @@ Prefer commands that read a ref directly over checking one out — they never
 touch the working tree, so a clone the user has open, mid-edit, or on a feature
 branch is completely undisturbed:
 
-| Need                       | Command                                            |
-| :------------------------- | :------------------------------------------------- |
+| Need                       | Command                                             |
+| :------------------------- | :-------------------------------------------------- |
 | Find a symbol at a version | `git -C <path> grep -n '<pattern>' <ref> -- <glob>` |
 | Read one file at a version | `git -C <path> show <ref>:<file>`                   |
 | List files at a version    | `git -C <path> ls-tree -r --name-only <ref>`        |
