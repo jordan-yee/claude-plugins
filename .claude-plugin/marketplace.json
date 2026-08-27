@@ -19,7 +19,7 @@
     },
     {
       "name": "repo-reference",
-      "description": "Answer questions about libraries, tools, and other dependencies from a local Git clone of its source and docs instead of web pages or memory",
+      "description": "Answer questions about a library, tool, or any other open source project from a local Git clone of its source and docs, instead of web pages or memory",
       "source": "./repo-reference",
       "category": "development"
     }

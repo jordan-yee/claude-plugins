@@ -24,7 +24,7 @@ A skill for authoring, debugging, and answering questions about [Kakoune](https:
 
 ### repo-reference
 
-A skill that answers questions about a library, tool, or other dependencies by consulting a local Git clone of its source and docs — greppable raw files at the exact version your project uses, instead of web pages or recollection.
+A skill that answers questions about a library, tool, or any other open source project by consulting a local Git clone of its source and docs — greppable raw files at the exact version you care about, instead of web pages or recollection.
 
 **Where clones go** is configured per machine in `config.md` under the plugin's data directory (`~/.claude/plugins/data/repo-reference-jordan-yee-claude-plugins/`). The layout is a base directory holding one directory per host, each holding `<org>/<repo>` — by default the base is your home dir, so GitHub repos land in `~/github/<org>/<repo>` and a Codeberg repo would go to a parallel `~/codeberg/<org>/<repo>`. Three layers resolve a repo, most specific winning:
 
