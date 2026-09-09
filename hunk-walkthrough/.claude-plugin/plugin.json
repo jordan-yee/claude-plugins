@@ -1,0 +1,6 @@
+{
+  "name": "hunk-walkthrough",
+  "homepage": "https://hunk.dev",
+  "repository": "https://github.com/jordan-yee/claude-plugins/tree/master/hunk-walkthrough",
+  "keywords": ["hunk", "diff", "code-review", "review", "walkthrough", "tui"]
+}

@@ -38,6 +38,14 @@ On first use the skill looks for directories that already hold clones and follow
 
 Alongside it, `index.md` accumulates short notes on each repo — where its docs live, which directory holds the interesting source. Both files live outside the plugin cache, so they survive plugin updates.
 
+### hunk-walkthrough
+
+A skill for a guided, story-order review of a changeset inside your live [Hunk](https://hunk.dev) diff-viewer session. Ask to be "walked through these changes in hunk" and Claude reorders the files into the sequence that best explains the change, attaches an inline note at each stop, and loads the result into your open Hunk window. You then step through the stops with `{` / `}`.
+
+Under the hood it writes a Hunk `--agent-context` sidecar (kept out of the diff, e.g. under `.git/`) and loads it with `hunk session reload`. Hunk's own bundled `hunk-review` skill covers the live-session CLI; this skill adds the sidecar-driven ordering on top of it.
+
+**Prerequisite:** [Hunk](https://hunk.dev/docs/start/install/) must be installed, and you launch the TUI yourself (`hunk diff` or `hunk show <ref>`) — Claude drives it via `hunk session` commands and never runs the interactive viewer.
+
 ## Usage
 
 ### 1. Add the marketplace

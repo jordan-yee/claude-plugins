@@ -22,6 +22,12 @@
       "description": "Answer questions about a library, tool, or any other open source project from a local Git clone of its source and docs, instead of web pages or memory",
       "source": "./repo-reference",
       "category": "development"
+    },
+    {
+      "name": "hunk-walkthrough",
+      "description": "Guided, story-order walkthrough of a changeset in your live Hunk diff-viewer session, with inline agent notes at each stop",
+      "source": "./hunk-walkthrough",
+      "category": "development"
     }
   ]
 }
