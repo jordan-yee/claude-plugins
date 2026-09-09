@@ -41,8 +41,8 @@ be useful to reference for ensuring all documentation is understood, but will
 likely not be the most token efficient approach for specific questions.
 
 The official doc site is at https://www.hunk.dev/docs/. Append `.md` to any
-page URL for its Markdown source (e.g. https://www.hunk.dev/docs/agents/review-with-an-agent/ -> https://www.hunk.dev/docs/agents/review-with-an-agent.md;
-). Note that these pages have a trailing `/` that you'd replace with the `.md`
+page URL for its Markdown source (e.g. https://www.hunk.dev/docs/agents/review-with-an-agent/ -> https://www.hunk.dev/docs/agents/review-with-an-agent.md).
+Note that these pages have a trailing `/` that you'd replace with the `.md`
 suffix to read as MD. This returns the page content as an MD file without the
 nav menu on the left side of the page when rendered in-full. The most efficient
 strategy is likely to load the [overview page](https://www.hunk.dev/docs/)
