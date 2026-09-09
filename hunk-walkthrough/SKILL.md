@@ -35,19 +35,25 @@ order; live `comment add` notes alone can't do that.
    `show <ref>`, pathspecs) so the loaded content doesn't change under the
    user.
 
-Further docs when needed: https://hunk.dev/llms.txt is an index of docs for
-reference by llms, which links to MD files with complete doc sets, which may
-be useful to reference for ensuring all documentation is understood, but will
-likely not be the most token efficient approach for specific questions.
+## Further docs
 
-The official doc site is at https://www.hunk.dev/docs/. Append `.md` to any
-page URL for its Markdown source (e.g. https://www.hunk.dev/docs/agents/review-with-an-agent/ -> https://www.hunk.dev/docs/agents/review-with-an-agent.md).
-Note that these pages have a trailing `/` that you'd replace with the `.md`
-suffix to read as MD. This returns the page content as an MD file without the
-nav menu on the left side of the page when rendered in-full. The most efficient
-strategy is likely to load the [overview page](https://www.hunk.dev/docs/)
-normally to get an index of the available doc pages, then fetch a target page
-identified from that directly as MD.
+The bundled skill from step 1 covers the `hunk session *` CLI. For anything
+beyond it, fetch the specific doc page as Markdown: take the page URL and
+replace its trailing `/` with `.md`. Pages relevant to this skill:
+
+- https://www.hunk.dev/docs/agents/agent-context-and-stml.md — sidecar format
+- https://www.hunk.dev/docs/agents/live-session-control.md — targeting, navigate, reload
+- https://www.hunk.dev/docs/agents/comments-and-annotations.md — comments and highlights
+- https://www.hunk.dev/docs/start/keyboard-and-mouse.md — the keys the user presses
+- https://www.hunk.dev/docs/help/troubleshooting.md
+- https://www.hunk.dev/docs/reference/cli.md — every flag; the site documents the
+  latest release, so prefer `hunk <command> --help` for the installed version
+
+Skip the corpus files. https://hunk.dev/llms-small.txt has the same text but
+collapses headings and tables into single run-on lines, and
+https://hunk.dev/llms-full.txt is ~70k tokens, mostly changelog and
+extension-API docs. The Markdown index at https://www.hunk.dev/docs.md links
+only a subset of pages; the full page list is only in the HTML site nav.
 
 ## Build the walkthrough
 
